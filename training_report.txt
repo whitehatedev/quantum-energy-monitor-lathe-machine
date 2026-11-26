@@ -1,0 +1,83 @@
+============================================================
+  FAULT DETECTION MODEL — TRAINING REPORT
+============================================================
+
+Date / Time        : 2026-11-26 23:15:38
+Dataset            : dataset_clean.csv
+Rows (raw)         : 902
+Rows (augmented)   : 1002
+Label dist (before): {0: 902}
+Label dist (after) : {np.int64(0): np.int64(902), np.int64(1): np.int64(100)}
+
+Best Model         : RandomForest
+CV Accuracy        : 1.0000
+Test Accuracy      : 1.0000
+
+All models:
+  RandomForest     CV=1.0000  Test=1.0000
+  XGBoost          CV=0.9988  Test=1.0000
+
+Meta JSON:
+{
+  "model_name": "RandomForest",
+  "feature_cols": [
+    "R_voltage",
+    "S_voltage",
+    "T_voltage",
+    "R_current",
+    "S_current",
+    "T_current",
+    "temperature_c",
+    "vib_digital_count",
+    "vib_intensity",
+    "piezo_intensity"
+  ],
+  "normal_ranges": {
+    "R_voltage": [
+      210,
+      250
+    ],
+    "S_voltage": [
+      210,
+      250
+    ],
+    "T_voltage": [
+      210,
+      250
+    ],
+    "R_current": [
+      0,
+      15
+    ],
+    "S_current": [
+      0,
+      15
+    ],
+    "T_current": [
+      0,
+      15
+    ],
+    "temperature_c": [
+      20,
+      45
+    ],
+    "vib_digital_count": [
+      0,
+      15
+    ],
+    "vib_intensity": [
+      0,
+      2.0
+    ],
+    "piezo_intensity": [
+      0,
+      4095
+    ]
+  },
+  "cv_accuracy": 1.0,
+  "test_accuracy": 1.0,
+  "n_train": 801,
+  "n_test": 201,
+  "report_folder": "reports\\training_20261126_231506",
+  "trained_at": "2026-11-26T23:15:38"
+}
